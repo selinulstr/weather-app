@@ -1,0 +1,55 @@
+<%- include("partials/header.ejs") %>   
+<% if (locals.weather) { %>
+<body style="background-image: url('<%= weather.img %>')"></body>
+   
+
+   
+<div class="weather-main-wrapper"> 
+        <div  class="weather-main">
+            <div class="weather-result <%= weather.img === 'images/rain.jpg' ? 'white' : '' %>">
+                <h3><%= weather.temp %>°</h3>
+                <div class="nameTime">
+                    <h4><%= weather.name %></h4>
+                    <p><%= weather.time %> - <%= weather.date %></p>
+                </div> 
+                 <div class="iconMain">
+                    <img src="<%= weather.icon_src %>" alt="weather-icon">
+                <p><%= weather.main %></p> 
+                 </div>
+            </div>
+            
+            <div class="side-result <%= weather.img === 'images/rain.jpg' ? 'white' : '' %>">
+            <div class="relative">
+                <form action="/weather" method="post">
+                    <input class="cityInput" type="text" placeholder="Search for another city" name="city" autocomplete="off">
+                    <input class="fontawesome submit" type="submit" value="&#xf002;" />
+                </form>
+            </div>
+        <div>
+            <h4 class="details">Weather Details</h4>
+            <p>Feels like <span><%= weather.feels_like %>°</span> </p>
+            <p>Humidity <span><%= weather.humidity %>%</span> </p>
+            <p>Wind <span><%= weather.wind %> km/h</span> </p>
+            <% if (weather.windGust) { %>
+                <p>Wind gusts <span><%= weather.windGust %> km/h</span> </p>
+            <% } %>
+            
+            <p>Cloud cover <span><%= weather.clouds %>%</span> </p>
+            <p>Pressure <span><%= weather.pressure %> mb</span> </p>
+            <p>Visibility <span><%= weather.visibility %> m</span> </p>
+            
+        </div>
+</div>
+
+        </div>
+    
+        
+ 
+        <%- include("partials/footer.ejs") %>
+    </div>
+
+</body>
+   <% } else { %>
+    <script> document.location.href = '/' </script>
+   <% } %>
+</html>

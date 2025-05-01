@@ -1,0 +1,30 @@
+
+ <%- include("partials/header.ejs") %>    
+ <body>
+    <div class="main-wrapper"> 
+ <div class="home-h1">
+    <% if(locals.err) { %>
+        <h1><%= err %></h1>
+    <% } else { %>
+        <h1>Weather forecast</h1>
+   <%  } %>
+   
+</div>
+    <div class="search-wrapper">
+    <form action="/weather" method="post">
+    <input class="cityInput" type="text" placeholder="Search for a city" name="city" autocomplete="off">
+    <input class="fontawesome submit" type="submit" value="&#xf002;" />
+</form>
+    </div>
+
+   
+
+
+
+
+
+<%- include("partials/footer.ejs") %>
+</div>
+
+</body>
+</html>

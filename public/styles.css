@@ -1,0 +1,310 @@
+body {
+    background-color: #071952;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+      background-image: url("images/bg.jpg");
+      
+      background-repeat: no-repeat;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 12rem;
+    align-items: center;
+    
+}
+
+
+.weather-main-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+
+.search-wrapper {
+    
+    position: relative;
+    width: 20%;
+   
+}
+
+.relative {
+    position: relative;
+}
+
+.relative .cityInput {
+    color: #071952;
+}
+
+.relative .cityInput::placeholder {
+    color: #071952;
+}
+
+.home-h1 h1 {
+    font-size: 7rem;
+    color: #088395;
+    margin-bottom: 0;
+    margin-top: 8rem;
+    text-shadow: 2px 2px 5px #00F5FF;
+}
+.cityInput {
+    width: 100%;
+    color: #088395;
+    padding: 20px 40px 20px 20px; 
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    text-indent: 5px;
+   opacity: 0.6;
+}
+.cityInput:hover {
+    outline:  2px solid #00F5FF;
+}
+.cityInput:focus {
+    outline: 1px solid #088395;
+    opacity: 1;
+}
+.cityInput::placeholder {
+    color: #088395;
+    opacity: 1;
+}
+
+
+
+.submit {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: gray;
+}
+.fontawesome {
+    
+        font-family: FontAwesome, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      
+}
+
+
+.footer {
+    padding: 1% 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+
+
+.weather-main {
+    padding: 3% 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 90%;
+    color: #071952;
+    
+}
+
+.white {
+    color: whitesmoke;
+}
+.weather-result {
+    align-self: flex-end;
+    width: 70%;
+    
+    display: flex;
+    gap: 3rem;
+    font-size: 3rem;
+    align-items: center;
+    
+   
+}
+
+.weather-result h3 {
+    font-size: 8rem;
+    margin: 0;
+}
+
+.weather-result p {
+    font-weight: 400;
+}
+
+.nameTime {
+    display: flex;
+    flex-direction: column;
+    
+    text-align: left;
+}
+
+.nameTime h4, .nameTime p {
+    margin: 0.25rem;
+    
+}
+
+.nameTime h4 {
+    font-size: 4rem;
+}
+
+.nameTime p, .iconMain p {
+    font-size: 2rem;
+}
+.iconMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.iconMain p {
+    width: max-content;
+    margin: 0 0 0.9rem 0;
+}
+
+.side-result {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+   
+}
+
+
+.details {
+    margin-bottom: 2.5rem;
+    
+  
+}
+
+span {
+    float: right;
+}
+
+
+@media (max-height: 680px) {
+
+    body {
+      
+       
+        
+    }
+    .main-wrapper {
+        gap: 8rem;
+    }
+    
+       .search-wrapper {
+        position: relative;
+        width: 80%;
+       
+    }
+      .home-h1 h1 {
+        font-size: 4rem;
+
+        margin: 5rem 1rem 0 1rem;
+        text-align: center;
+    }
+
+
+    .weather-main-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+       gap: 2rem;
+      
+    }
+    
+    
+
+    .relative {
+        position: relative;
+        margin-top: 2rem;
+        order: 1;
+    }
+  
+    .weather-main {
+        padding: 5%;
+        width: 100%;
+       
+        flex-direction: column;
+      
+        height: auto;
+   
+    }
+    
+
+    .weather-result {
+        align-self: center;
+        width: 100%;
+        flex-direction: column;
+        gap: 0.25rem;
+        
+        align-items: center;
+        
+       
+    }
+    
+    .weather-result h3 {
+        font-size: 4rem;
+     
+    }
+    
+    
+    .nameTime {
+      
+        text-align: center;
+    }
+    
+    .nameTime h4, .nameTime p {
+        margin: 0.25rem;
+        
+    }
+    
+    .nameTime h4 {
+        font-size: 3rem;
+    }
+    
+    .nameTime p, .iconMain p {
+        font-size: 1.5rem;
+    }
+ 
+    
+    .iconMain p {
+       
+        margin: 0 0 0.25 0;
+    }
+    
+    .side-result {
+        width: 100%;
+        gap: 1rem;
+        font-size: 1rem;
+     
+    }
+    
+    
+    .details {
+        margin-bottom: 1.5rem;
+        
+      
+    }
+    
+ 
+}
